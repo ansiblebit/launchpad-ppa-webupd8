@@ -1,6 +1,24 @@
 ---
 # tasks file
 
-- debug: >
-    msg="invoked"
+## include OS family specific task file
 
+- name: if debian, include family specific task file
+  include: "os_distribution/debian.yml"
+  when: ansible_distribution | lower == 'debian'
+
+- name: if ubuntu, include family specific task file
+  include: "os_distribution/ubuntu.yml"
+  when: ansible_distribution | lower == 'ubuntu'
+
+- name: check if operating system is suported
+  fail:
+    msg: "The operating system ({{ ansible_os_family }}) of the target machine ({{ inventory_hostname }}) is not currently supported."
+  when: os_supported is not defined
+
+
+## generic tasks
+
+- apt:
+    update_cache=yes
+    cache_valid_time={{ ppa_webupd8_cache_valid_time }}
