@@ -1,2 +1,4 @@
 ---
 # defaults file
+
+ppa_webupd8_cache_valid_time: 3600
