@@ -7,6 +7,8 @@
 
 An [Ansible](http://www.ansible.com) role to setup the [webupd8](http://www.webupd8.org/) launchpad apt repository. 
 
+A brief description of the role goes here.
+
 ## Requirements
 
 - ansible >= 1.7.2
