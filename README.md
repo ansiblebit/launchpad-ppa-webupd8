@@ -46,6 +46,6 @@ BSD
 
 - [steenzout](http://github.com/steenzout)
 
-# Links
+## Links
 
 - [WebUpd8 team : Oracle Java (JDK) 7 / 8 / 9 Installer PPA](https://launchpad.net/~webupd8team/+archive/ubuntu/java)
