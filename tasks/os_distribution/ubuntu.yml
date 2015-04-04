@@ -1,0 +1,12 @@
+---
+# task file for Debian OS family
+
+- name: ubuntu is supported
+  set_fact:
+    os_supported: yes
+
+- name: ensure the webupd8 launchpad apt repository is present
+  apt_repository:
+    repo=ppa:webupd8team/java
+    state=present
+  sudo: yes
