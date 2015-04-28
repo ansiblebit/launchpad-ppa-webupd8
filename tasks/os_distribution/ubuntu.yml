@@ -8,5 +8,6 @@
 - name: ensure the webupd8 launchpad apt repository is present
   apt_repository:
     repo=ppa:webupd8team/java
+    update_cache=yes
     state=present
   sudo: yes

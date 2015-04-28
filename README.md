@@ -35,6 +35,10 @@ is always nice for users too:
 
 ## Changelog
 
+- v1.0.4 : 28 April 2015
+    - update_cache is now run with sudo privileges
+- v1.0.2 : 17 April 2015
+    - update_cache=yes when adding new repositories
 - v1.0.0 : 4 April 2015
     - initial release
 
