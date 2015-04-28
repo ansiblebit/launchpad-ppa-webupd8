@@ -22,4 +22,4 @@
 - apt:
     update_cache=yes
     cache_valid_time={{ ppa_webupd8_cache_valid_time }}
- sudo: yes
+  sudo: yes
