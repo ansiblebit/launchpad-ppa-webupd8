@@ -11,17 +11,8 @@ galaxy_info:
     - wheezy
   - name: Ubuntu
     versions:
-    - lucid
-    - maverick
-    - natty
-    - oneiric
     - precise
-    - quantal
-    - raring
-    - saucy
     - trusty
-    - utopic
-    - vivid
   categories:
   - packaging
   - system
