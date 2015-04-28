@@ -1,5 +1,5 @@
 ---
-# task file for Debian OS family
+# task file for Ubuntu distribution
 
 - name: ubuntu is supported
   set_fact:

@@ -1,5 +1,5 @@
 ---
-# task file for Debian OS family
+# task file for Debian distribution
 
 - name: debian is supported
   set_fact:
