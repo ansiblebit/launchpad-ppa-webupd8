@@ -6,5 +6,5 @@
   connection: local
 
   roles:
-    - ansiblebit.oracle-java
-    - launchpad-ppa-webupd8
+    - ansiblebit.launchpad-ppa-webupd8
+
