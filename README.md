@@ -39,7 +39,7 @@ is always nice for users too:
 - v1.1.0 : 30 April 2015
     - ansible minimum requirements now set to 1.8.4
     - renamed ppa_webupd8_cache_valid_time to launchpad_ppa_webupd8_cache_valid_time
-    - standardized testing with primogen v2.0.2
+    - standardized testing with primogen v2.0.6
     - added test/support for debian jessie
     - added test/support for ubuntu vivid
 - v1.0.4 : 28 April 2015
