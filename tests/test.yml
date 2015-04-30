@@ -1,7 +1,0 @@
----
-# file: tests/site.yml
-
-- hosts: all
-  gather_facts: yes
-  roles:
-    - launchpad-ppa-webupd8

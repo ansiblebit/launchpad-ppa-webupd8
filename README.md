@@ -21,7 +21,7 @@ An [Ansible](http://www.ansible.com) role to setup the [webupd8](http://www.webu
 
 None.
 
-## Example Playbook
+## Playbooks
 
 Including an example of how to use your role
 (for instance, with variables passed in as parameters)
@@ -39,6 +39,9 @@ is always nice for users too:
     - update_cache=yes when adding new repositories
 - v1.0.0 : 4 April 2015
     - initial release
+
+## Links
+
 
 ## License
 
