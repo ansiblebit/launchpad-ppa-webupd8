@@ -28,7 +28,7 @@
   remote_user: vagrant
 
   roles:
-    - primogen
+    - launchpad-ppa-webupd8
 
 
 - name: clear host entries play
