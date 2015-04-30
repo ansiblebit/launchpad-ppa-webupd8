@@ -6,5 +6,4 @@
   connection: local
 
   roles:
-    - ansiblebit.launchpad-ppa-webupd8
-
+    - launchpad-ppa-webupd8
