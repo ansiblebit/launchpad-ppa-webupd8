@@ -1,7 +1,10 @@
 # ansiblebit.launchpad-ppa-webupd8
 
-[![Build Status](https://travis-ci.org/ansiblebit/launchpad-ppa-webupd8.svg?branch=master)](https://travis-ci.org/ansiblebit/launchpad-ppa-webupd8)
 [![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/ansiblebit/launchpad-ppa-webupd8/master/LICENSE)
+[![Build Status](https://travis-ci.org/ansiblebit/launchpad-ppa-webupd8.svg?branch=master)](https://travis-ci.org/ansiblebit/launchpad-ppa-webupd8)
+
+[![Platform](http://img.shields.io/badge/platforms-debian-a80030.svg?style=flat)](#)
+[![Platform](http://img.shields.io/badge/platforms-ubuntu-dd4814.svg?style=flat)](#)
 
 [![Project Stats](https://www.openhub.net/p/ansiblebit-launchpad-ppa-webupd8/widgets/project_thin_badge.gif)](https://www.openhub.net/p/ansiblebit-launchpad-ppa-webupd8/)
 
@@ -36,6 +39,8 @@ is always nice for users too:
 - v1.1.0 : 30 April 2015
     - renamed ppa_webupd8_cache_valid_time to launchpad_ppa_webupd8_cache_valid_time
     - standardized testing with primogen v2.0.2
+    - added test/support for debian jessie
+    - added test/support for ubuntu vivid
 - v1.0.4 : 28 April 2015
     - update_cache is now run with sudo privileges
 - v1.0.2 : 17 April 2015
