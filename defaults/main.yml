@@ -1,4 +1,7 @@
 ---
+# file: launchpad-ppa-webupd8/defaults/main.yml
+#
 # defaults file
+#
 
-ppa_webupd8_cache_valid_time: 3600
+launchpad_ppa_webupd8_cache_valid_time: 3600

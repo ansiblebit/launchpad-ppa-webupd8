@@ -1,4 +1,8 @@
 ---
+# file: launchpad-ppa-webupd8/meta/main.yml
+#
+# meta file
+#
 galaxy_info:
   author: Pedro Salgado
   description: Role to setup webupd8 apt repo at launchpad.net.

@@ -1,5 +1,8 @@
 ---
+# file: launchpad-ppa-webupd8/tasks/main.yml
+#
 # tasks file
+#
 
 ## include OS family specific task file
 
@@ -21,5 +24,5 @@
 
 - apt:
     update_cache=yes
-    cache_valid_time={{ ppa_webupd8_cache_valid_time }}
+    cache_valid_time={{ launchpad_ppa_webupd8_cache_valid_time }}
   sudo: yes
