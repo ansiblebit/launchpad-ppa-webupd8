@@ -1,5 +1,5 @@
 ---
-# file: primogen/tests/tox.yml
+# file: launchpad-ppa-webupd8/tests/localhost.yml
 
 - hosts: localhost
   gather_facts: yes
@@ -7,4 +7,4 @@
 
   roles:
     - ansiblebit.oracle-java
-    - primogen
+    - launchpad-ppa-webupd8

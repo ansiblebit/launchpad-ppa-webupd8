@@ -1,5 +1,5 @@
 ---
-# file: primogen/tests/vars/main.yml
+# file: launchpad-ppa-webupd8/tests/vars/main.yml
 #
 
 vagrant:
