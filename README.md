@@ -12,7 +12,7 @@ An [Ansible](http://www.ansible.com) role to setup the [webupd8](http://www.webu
 
 ## Requirements
 
-- ansible >= 1.7.2
+- ansible >= 1.8.4
 
 ## Role Variables
 
@@ -37,6 +37,7 @@ is always nice for users too:
 ## Changelog
 
 - v1.1.0 : 30 April 2015
+    - ansible minimum requirements now set to 1.8.4
     - renamed ppa_webupd8_cache_valid_time to launchpad_ppa_webupd8_cache_valid_time
     - standardized testing with primogen v2.0.2
     - added test/support for debian jessie
