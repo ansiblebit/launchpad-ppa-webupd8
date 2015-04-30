@@ -15,7 +15,7 @@ An [Ansible](http://www.ansible.com) role to setup the [webupd8](http://www.webu
 
 | variable | description |
 |:----------------------------:|:-----|
-| ppa_webupd8_cache_valid_time | the amount of time in seconds the apt cache is valid. |
+| launchpad_ppa_webupd8_cache_valid_time | the amount of time in seconds the apt cache is valid. |
 
 ## Dependencies
 
@@ -29,10 +29,13 @@ is always nice for users too:
 
     - hosts: servers
       roles:
-         - { role: ansiblebit.launchpad-ppa-webupd8, ppa_webupd8_cache_valid_time: 3600 }
+         - { role: ansiblebit.launchpad-ppa-webupd8, launchpad_ppa_webupd8_cache_valid_time: 3600 }
 
 ## Changelog
 
+- v1.1.0 : 30 April 2015
+    - renamed ppa_webupd8_cache_valid_time to launchpad_ppa_webupd8_cache_valid_time
+    - standardized testing with primogen v2.0.2
 - v1.0.4 : 28 April 2015
     - update_cache is now run with sudo privileges
 - v1.0.2 : 17 April 2015
