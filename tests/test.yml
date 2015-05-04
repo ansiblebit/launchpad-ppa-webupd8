@@ -1,10 +1,10 @@
 ---
-# file: primogen/tests/vagrant.yml
+# file: launchpad-ppa-webupd8/tests/vagrant.yml
 
 - name: tests play
   hosts: all
   gather_facts: yes
 
   roles:
-    - primogen
+    - launchpad-ppa-webupd8
     - tests
