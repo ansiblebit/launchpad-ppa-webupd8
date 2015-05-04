@@ -1,0 +1,10 @@
+---
+# file: primogen/tests/vagrant.yml
+
+- name: tests play
+  hosts: all
+  gather_facts: yes
+
+  roles:
+    - primogen
+    - tests

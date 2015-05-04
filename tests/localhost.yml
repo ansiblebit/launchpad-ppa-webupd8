@@ -1,9 +1,0 @@
----
-# file: launchpad-ppa-webupd8/tests/localhost.yml
-
-- hosts: localhost
-  gather_facts: yes
-  connection: local
-
-  roles:
-    - launchpad-ppa-webupd8
