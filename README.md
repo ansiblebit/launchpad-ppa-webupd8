@@ -36,6 +36,8 @@ is always nice for users too:
 
 ## Changelog
 
+- v1.1.2 : 5 May 2015
+    - standardize tests with primogen v2.2.0
 - v1.1.0 : 30 April 2015
     - ansible minimum requirements now set to 1.8.4
     - renamed ppa_webupd8_cache_valid_time to launchpad_ppa_webupd8_cache_valid_time
