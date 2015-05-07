@@ -7,6 +7,10 @@ CONFIGURATION_FILE = 'boxes.yml'
 
 Vagrant.configure('2') do |config|
 
+  # overcome 'stdin: is not a tty' errors when trying to provision on vivid64
+  config.ssh.pty = true
+  config.ssh.shell = 'bash'
+
   # puts "[DEBUG] loading box settings from #{CONFIGURATION_FILE}..."
   vagrant_environment = YAML.load_file(File.expand_path(CONFIGURATION_FILE, File.dirname(__FILE__)))
 
@@ -20,7 +24,6 @@ Vagrant.configure('2') do |config|
     config.vm.define box_name do |host|
 
       host.vm.box = box_settings['box'] unless not box_settings.key? 'box'
-      host.vm.hostname = box_name
 
       host.vm.network box_settings['network']['name'], ip: box_settings['network']['ip'] unless box_settings.key? 'network'
 
