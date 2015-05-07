@@ -36,6 +36,8 @@ is always nice for users too:
 
 ## Changelog
 
+- v3.0.0 : 7 May 2015
+    - synchronized major version with primogen for easier reference
 - v1.1.2 : 5 May 2015
     - standardize tests with primogen v2.2.0
 - v1.1.0 : 30 April 2015
