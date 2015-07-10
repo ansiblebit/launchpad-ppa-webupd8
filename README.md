@@ -10,9 +10,29 @@
 
 An [Ansible](http://www.ansible.com) role to setup the [webupd8](http://www.webupd8.org/) launchpad apt repository. 
 
+## Tests
+
+| Family | Distribution | Version | Test Status |
+|:-:|:-:|:-:|:-:|
+| Debian | Debian  | Jessie  | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
+| Debian | Debian  | Wheezy  | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
+| Debian | Ubuntu  | Precise | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-passed-006400.svg?style=flat)](#)  |
+| Debian | Ubuntu  | Trusty  | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
+| Debian | Ubuntu  | Vivid   | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
+| RedHat | CentOS  | 6.4     | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
+| RedHat | CentOS  | 6.6     | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
+| RedHat | Centos  | 7       | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
+| RedHat | Fedora  | 20      | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
+| RedHat | Fedora  | 21      | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
+
 ## Requirements
 
 - ansible >= 1.8.4
+
+# Facts
+| variable | description |
+|:-:|:--|
+| launchpad_ppa_webupd8_os_supported | fact set by this role to determine if the host OS is supported. |
 
 ## Role Variables
 
@@ -36,6 +56,14 @@ is always nice for users too:
 
 ## Changelog
 
+- v3.7.0 : 10 Jul 2015
+    - don't update the apt repositories cache when you're just adding new repos since it will get updated in the end
+    - minor version number will now match primogen major version number
+    - merge with ansiblebit.primogen v7
+        - upgrade tests to use ansible v1.9.2 instead of v1.9.1
+        - pass ANSIBLE_ASK_SUDO_PASS environment variable to the tox test environment
+        - improved idempotence test
+    - renamed fact os_supported to launchpad_ppa_webupd8_os_supported
 - v3.0.0 : 7 May 2015
     - synchronized major version with primogen for easier reference
 - v1.1.2 : 5 May 2015
@@ -55,6 +83,7 @@ is always nice for users too:
 
 ## Links
 
+- [WebUpd8 team : Oracle Java (JDK) 7 / 8 / 9 Installer PPA](https://launchpad.net/~webupd8team/+archive/ubuntu/java)
 
 ## License
 
@@ -63,7 +92,3 @@ BSD
 ## Author Information
 
 - [steenzout](http://github.com/steenzout)
-
-## Links
-
-- [WebUpd8 team : Oracle Java (JDK) 7 / 8 / 9 Installer PPA](https://launchpad.net/~webupd8team/+archive/ubuntu/java)

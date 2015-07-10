@@ -3,11 +3,11 @@
 
 - name: ubuntu is supported
   set_fact:
-    os_supported: yes
+    launchpad_ppa_webupd8_os_supported: yes
 
 - name: ensure the webupd8 launchpad apt repository is present
   apt_repository:
     repo=ppa:webupd8team/java
-    update_cache=yes
+    update_cache=no
     state=present
   sudo: yes

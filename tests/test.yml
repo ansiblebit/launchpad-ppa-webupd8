@@ -1,10 +1,18 @@
 ---
-# file: launchpad-ppa-webupd8/tests/vagrant.yml
+# file: launchpad-ppa-webupd8/tests/test.yml
 
-- name: tests play
+- name: provisioning play
   hosts: all
   gather_facts: yes
 
   roles:
     - launchpad-ppa-webupd8
-    - tests
+
+- name: tests play
+  hosts: all
+  gather_facts: yes
+  tags: test
+
+  roles:
+    - { role: tests,
+        when: idempotence is defined and idempotence }

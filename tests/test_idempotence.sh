@@ -3,7 +3,7 @@
 #
 # Bash script to run idempotence tests.
 #
-# version: 1.2
+# version: 1.4
 #
 # usage:
 #
@@ -12,6 +12,7 @@
 # options:
 #
 #   --box       The name of the Vagrant box or host name
+#   --env       The name of the test environment
 #   --inventory The Ansible inventory in the form of a file or string "host,"
 #   --playbook  The path to the Ansible test playbook
 #
@@ -22,9 +23,16 @@
 #
 #   # on a Vagrant box
 #   bash test_idempotence.sh \
-#       --box precise64
+#       --box precise64.vagrant.dev
 #       --inventory .vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory
 #
+#
+# changelog:
+#
+#   v1.4 : 10 Jul 2015
+#     - added extra variables to force running idempotence tests on vagrant
+#   v1.2
+#     - added env option
 #
 # author(s):
 #   - Pedro Salgado <steenzout@ymail.com>
@@ -56,6 +64,11 @@ key="$1"
         BOX="$2"
         shift;;
 
+        --env)
+        # the test environment
+        ENV="$2"
+        shift;;
+
         --inventory)
         # the Ansible inventory in the form of a file or string "host,"
         INVENTORY="$2"
@@ -85,13 +98,13 @@ LOGFILE="log/${BOX}_${VIRTUALENV_NAME}.log"
 
 EXTRA_ARGS=''
 if [ $BOX == "localhost" ]; then
-    EXTRA_ARGS="--connection=local --extra-vars idempotence=yes"
+    EXTRA_ARGS="--connection=local --extra-vars idempotence=yes --extra-vars env=${ENV}"
 else
-    EXTRA_ARGS="--u vagrant"
+    EXTRA_ARGS="--u vagrant --extra-vars idempotence=yes --extra-vars env=vagrant"
 fi
 
 echo "[INFO] ${BOX} ${VIRTUALENV_NAME} running idempotence test..."
-ansible-playbook -i ${INVENTORY} --limit ${BOX}, ${PLAYBOOK} ${EXTRA_ARGS} 2>&1 | tee ${LOGFILE} | \
+ansible-playbook -i ${INVENTORY} --limit ${BOX}, ${EXTRA_ARGS} ${PLAYBOOK} 2>&1 | tee ${LOGFILE} | \
     grep "${BOX}" | grep -q "${PASS_CRITERIA}" && \
     echo -ne "[TEST] ${BOX} ${VIRTUALENV_NAME} idempotence : ${GREEN}PASS${NC}\n" || \
-    (echo -ne "[TEST] ${BOX} ${VIRTUALENV_NAME} idempotence : ${RED}FAILED${NC} ${PASS_CRITERIA}\n" && exit 1)
+    (echo -ne "[TEST] ${BOX} ${VIRTUALENV_NAME} idempotence : ${RED}FAILED${NC} ${PASS_CRITERIA}\n" && cat ${LOGFILE} && exit 1)
