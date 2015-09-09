@@ -10,6 +10,7 @@
 
 An [Ansible](http://www.ansible.com) role to setup the [webupd8](http://www.webupd8.org/) launchpad apt repository. 
 
+
 ## Tests
 
 | Family | Distribution | Version | Test Status |
@@ -20,20 +21,6 @@ An [Ansible](http://www.ansible.com) role to setup the [webupd8](http://www.webu
 | Debian | Ubuntu  | Trusty  | [![x86_64](http://img.shields.io/badge/x86_64-passed-006400.svg?style=flat)](#) |
 | Debian | Ubuntu  | Vivid   | [![x86_64](http://img.shields.io/badge/x86_64-passed-006400.svg?style=flat)](#) |
 
-## Tests
-
-| Family | Distribution | Version | Test Status |
-|:-:|:-:|:-:|:-:|
-| Debian | Debian  | Jessie  | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
-| Debian | Debian  | Wheezy  | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
-| Debian | Ubuntu  | Precise | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-passed-006400.svg?style=flat)](#)  |
-| Debian | Ubuntu  | Trusty  | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
-| Debian | Ubuntu  | Vivid   | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
-| RedHat | CentOS  | 6.4     | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
-| RedHat | CentOS  | 6.6     | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
-| RedHat | Centos  | 7       | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
-| RedHat | Fedora  | 20      | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
-| RedHat | Fedora  | 21      | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
 
 ## Requirements
 
@@ -45,15 +32,16 @@ An [Ansible](http://www.ansible.com) role to setup the [webupd8](http://www.webu
 |:-:|:--|
 | launchpad_ppa_webupd8_os_supported | fact set by this role to determine if the host OS is supported. |
 
+
 ## Role Variables
 
-| variable | description |
-|:-:|:--|
-| launchpad_ppa_webupd8_cache_valid_time | the amount of time in seconds the apt cache is valid. |
+None.
+
 
 ## Dependencies
 
 None.
+
 
 ## Playbooks
 
@@ -65,8 +53,12 @@ is always nice for users too:
       roles:
          - { role: ansiblebit.launchpad-ppa-webupd8, launchpad_ppa_webupd8_cache_valid_time: 3600 }
 
+
 ## Changelog
 
+- v3.9.4 : 9 Sep 2015
+    - idempotence tests now pass
+    - removed launchpad_ppa_webupd8_cache_valid_time variable
 - v3.9.2 : 9 Sep 2015
     - fixed tests
 - v3.9.0 : 9 Sep 2015
@@ -100,13 +92,16 @@ is always nice for users too:
 - v1.0.0 : 4 April 2015
     - initial release
 
+
 ## Links
 
 - [WebUpd8 team : Oracle Java (JDK) 7 / 8 / 9 Installer PPA](https://launchpad.net/~webupd8team/+archive/ubuntu/java)
 
+
 ## License
 
 BSD
+
 
 ## Author Information
 
