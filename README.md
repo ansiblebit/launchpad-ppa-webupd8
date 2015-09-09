@@ -52,6 +52,8 @@ is always nice for users too:
 
 ## Changelog
 
+- v3.8.0 : 9 Sep 2015
+    - use ansible 1.9.3
 - v3.7.2 : 9 Sep 2015
     - Debian and Ubuntu update apt cache when adding repositories
 - v3.7.0 : 10 Jul 2015
