@@ -4,18 +4,6 @@
 [![Build Status](https://travis-ci.org/ansiblebit/launchpad-ppa-webupd8.svg?branch=master)](https://travis-ci.org/ansiblebit/launchpad-ppa-webupd8)
 
 [![Platform](http://img.shields.io/badge/platform-debian-a80030.svg?style=flat)](#)
-<<<<<<< HEAD
-=======
-[![Platform](http://img.shields.io/badge/platform-centos-932279.svg?style=flat)](#)
-[![Platform](http://img.shields.io/badge/platform-fedora-3c6eb4.svg?style=flat)](#)
-[![Platform](http://img.shields.io/badge/platform-freebsd-ae0000.svg?style=flat)](#)
-[![Platform](http://img.shields.io/badge/platform-macosx-000000.svg?style=flat)](#)
-[![Platform](http://img.shields.io/badge/platform-mint-87cfbe.svg?style=flat)](#)
-[![Platform](http://img.shields.io/badge/platform-opensuse-73ba25.svg?style=flat)](#)
-[![Platform](http://img.shields.io/badge/platform-redhat-cc0000.svg?style=flat)](#)
-[![Platform](http://img.shields.io/badge/platform-sles-73ba25.svg?style=flat)](#)
-[![Platform](http://img.shields.io/badge/platform-smartos-487487.svg?style=flat)](#)
->>>>>>> b3b181c56b985c7a04151b31a06b59533cd06d9b
 [![Platform](http://img.shields.io/badge/platform-ubuntu-dd4814.svg?style=flat)](#)
 
 [![Project Stats](https://www.openhub.net/p/ansiblebit-launchpad-ppa-webupd8/widgets/project_thin_badge.gif)](https://www.openhub.net/p/ansiblebit-launchpad-ppa-webupd8/)
