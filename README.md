@@ -52,6 +52,8 @@ is always nice for users too:
 
 ## Changelog
 
+- v3.7.2 : 9 Sep 2015
+    - Debian and Ubuntu update apt cache when adding repositories
 - v3.7.0 : 10 Jul 2015
     - don't update the apt repositories cache when you're just adding new repos since it will get updated in the end
     - minor version number will now match primogen major version number
