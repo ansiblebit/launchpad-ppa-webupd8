@@ -67,6 +67,8 @@ is always nice for users too:
 
 ## Changelog
 
+- v3.9.2 : 9 Sep 2015
+    - fixed tests
 - v3.9.0 : 9 Sep 2015
     - merge with primogen v9
     - use ansible 1.9.3

@@ -4,9 +4,10 @@
 - name: tests play
   hosts: all
   gather_facts: yes
-  tags: test
 
   roles:
+    - ansiblebit.launchpad-ppa-webupd8
+
     - { role: tests,
         when: idempotence is defined and idempotence }
 
