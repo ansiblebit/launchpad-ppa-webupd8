@@ -67,8 +67,10 @@ is always nice for users too:
 
 ## Changelog
 
-- v3.8.0 : 9 Sep 2015
+- v3.9.0 : 9 Sep 2015
+    - merge with primogen v9
     - use ansible 1.9.3
+    - removal of duplicate provisioning play when running tests
 - v3.7.2 : 9 Sep 2015
     - Debian and Ubuntu update apt cache when adding repositories
 - v3.7.0 : 10 Jul 2015
