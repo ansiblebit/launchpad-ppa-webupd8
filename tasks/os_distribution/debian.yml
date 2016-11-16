@@ -10,18 +10,18 @@
     id=0xC2518248EEA14886
     keyserver=keyserver.ubuntu.com
     state=present
-  sudo: yes
+  become: yes
 
 - name: ensure the webupd8 launchpad apt repository is present
   apt_repository:
     repo='deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main'
     update_cache=yes
     state=present
-  sudo: yes
+  become: yes
 
 - name: ensure the webupd8 launchpad source apt repository is present
   apt_repository:
     repo='deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main'
     update_cache=yes
     state=present
-  sudo: yes
+  become: yes
