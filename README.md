@@ -47,13 +47,10 @@ None.
 
 ## Playbooks
 
-Including an example of how to use your role
-(for instance, with variables passed in as parameters)
-is always nice for users too:
-
     - hosts: servers
       roles:
-         - { role: ansiblebit.launchpad-ppa-webupd8, launchpad_ppa_webupd8_cache_valid_time: 3600 }
+         - role: ansiblebit.launchpad-ppa-webupd8
+           launchpad_ppa_webupd8_cache_valid_time: 3600
 
 
 ## Links
