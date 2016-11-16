@@ -8,18 +8,26 @@ galaxy_info:
   description: Role to setup webupd8 apt repo at launchpad.net.
   company: ansiblebit.org
   license: BSD
-  min_ansible_version: 1.8.4
+  min_ansible_version: 1.9.4
   platforms:
-  - name: Debian
-    versions:
-    - jessie
-    - wheezy
-  - name: Ubuntu
-    versions:
-    - vivid
-    - trusty
-    - precise
-  categories:
-  - packaging
-  - system
+    - name: Debian
+      versions:
+        - jessie
+        - wheezy
+    - name: RedHat
+      versions:
+        - all
+        - any
+        - 7
+        - 6
+    - name: Ubuntu
+      versions:
+        - xenial
+        - vivid
+        - trusty
+        - precise
+  galaxy_tags:
+    - development
+    - java
+    - system
 dependencies: []
