@@ -24,7 +24,7 @@ An [Ansible](http://www.ansible.com) role to setup the [webupd8](http://www.webu
 
 ## Requirements
 
-- ansible >= 1.8.4
+- ansible >= 1.9.4
 
 # Facts
 
@@ -57,13 +57,3 @@ is always nice for users too:
 ## Links
 
 - [WebUpd8 team : Oracle Java (JDK) 7 / 8 / 9 Installer PPA](https://launchpad.net/~webupd8team/+archive/ubuntu/java)
-
-
-## License
-
-BSD
-
-
-## Author Information
-
-- [steenzout](http://github.com/steenzout)
